@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <!-- <link rel="stylesheet" href="/css/normalize.css"> -->
+  <link rel="stylesheet" href="/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <!-- <link rel="stylesheet" href="/css/main.css"> -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+
+<!-- code mirror 
+  <script src="/codemirror/lib/codemirror.js"></script>
+  <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+  <script src="/codemirror/mode/javascript/javascript.js"></script>
+
+
+  ace editor
+   <script src="/ace-builds-master/src-min/ace.js" type="text/javascript" charset="utf-8">
+
+   </script>
+ -->
+
+
+<link rel="stylesheet" type="text/css" href="http://eclipse.org/orion/editor/releases/3.0/built-editor.css"/>
+<script src="http://eclipse.org/orion/editor/releases/3.0/built-editor.min.js"></script>
+<script>
+  require(["orion/editor/edit"], function(edit) {
+    edit({className: "editor"});
+  });
+</script>
+
+
+
+  <title>Dev Boot Tracker</title>
+</head>
+<body>
+  
+  <header class="header">
+    <a href="/reset"><h1>Dev Boot Tracker</h1></a>
+    <ul class="nav">
+      
+      <li><form class="input_form" action="/issues/close" method="get">
+      <input type="submit" class="btn-default" value="Close Issue">
+      </form></li>
+      
+      <li><form class="input_form" action="/issues/update" method="get">
+      <input type="submit" class="btn-default" value="Update Issue">
+      </form></li>
+      
+      <li><form class="input_form" action="/issues/list" method="get">
+      <input type="submit" class="btn-default" value="List Issues">
+      </form></li>
+      
+      <li><form class="input_form" action="/issues/new" method="get">
+      <input type="submit" class="btn-default" value="Open Issue">
+      </form></li>
+
+    </ul>
+  </header>
+
+  <%= yield %>
+
+</body>
+</html>

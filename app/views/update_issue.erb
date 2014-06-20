@@ -1,0 +1,8 @@
+<% all_issues %>
+
+<form name="update_issue" action="/issues/update_issue_id" method="get">
+ <label class="label" for="update_issue">Issue ID:</label>
+    <input type="text" name="issue_id" placeholder="required" value="<%= @params[:issue_id] %>">
+</form>
+
+<%= erb :list_issues %>

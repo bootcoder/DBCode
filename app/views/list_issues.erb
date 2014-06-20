@@ -1,0 +1,8 @@
+<ul>
+	
+	<% active_issues %>
+	<% @active_issues.each do |issue| %>
+		<li>Issue: <%= issue.id %> <br>Title: <%= issue.issue_title %> <br>Priority: <%= issue.priority %><br><a href="<%= "#{issue.gist}" %>" title="Gist">Gist Link</a></li>
+		<br>
+	<% end %>
+</ul>

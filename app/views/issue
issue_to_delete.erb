@@ -1,0 +1,14 @@
+<div class="container">
+	<br>
+<% all_issues %>
+<%= p session[:delete_id] %>
+
+<br>
+<br>
+	<form action=<%="/issues/#{@issue.id}"%> method="post">
+		<input type="hidden" name="_method" value="delete">
+		<input type="hidden" name="delete_id" value="<% @note.id %>">
+		Confirm CLOSE ISSUE of issue by entering ID: <input type="text" name="close_id_confirm">
+	 	<input type="submit" value="CLOSE ISSUE">
+	</form>
+</div>

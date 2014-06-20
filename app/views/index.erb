@@ -1,0 +1,15 @@
+<% all_issues %>
+
+<%= erb :view_issues if session[:list] %>
+
+<%= erb :new_issue if session[:create] %>
+
+<%= erb :update_issue if session[:update] %>
+
+<%= erb :update_issue_id if session[:update_id] %>
+
+<%= erb :close_issue if session[:close] %>
+
+<%= erb :confirm_close if session[:confirm_close] %>
+
+<%= erb :list_view if session[:list_view] %>
