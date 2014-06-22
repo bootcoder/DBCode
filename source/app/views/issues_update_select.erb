@@ -1,0 +1,19 @@
+
+
+
+
+      <div class="container move_down centered">
+				<% all_issues %>
+				<h3>Update Issue:</h3>
+
+				<form name="id" action="/issues/update/select" method="post">
+					<p>Enter a Issue ID to update.</p>
+				  <input type="text" name="id" placeholder="Issue ID" value="<%= @params[:id] %>">
+        	<input type="submit" class="btn btn-primary btn-lg" role="button" value="Submit">
+				</form>
+				<% session[:update_button] = true %>
+				<%= erb :_list_all_issues %>
+				<% session[:update_button] = false %>
+
+      </div>
+    

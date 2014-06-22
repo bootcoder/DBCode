@@ -1,0 +1,90 @@
+<div class="down_left">
+    <%= @updater %>
+  <form name="update_issue" class="form-hotizontal nav-ele down-left dark-box" action="/issues/update" method="post">
+    <% find_issue_by_id(session[:issue_id]) %>
+    
+    <ul class="input-group list-inline">
+        <h3>Update Issue:</h3>
+        <h4>Create a new coding issue to get some help.</h4>
+        <h4>Please be as descriptive of your problem as possible</h4>
+        <li>
+            <label class="label" for="issue_title">Issue Title:</label>
+            <input type="text" name="issue_title" placeholder="required" value="<%= @found_issue[:issue_title] %>">
+            <% if @errors %>
+            <span class="tomato"><%= @errors[:issue_title] %></span>
+            <% end %>
+            <br>
+            <br>
+        </li>
+
+        <li>
+            <label class="label" for="issue_language">Primary Language:</label>
+            <input type="text" name="issue_language" placeholder="ruby, js, sinatra, ect" value="<%= @found_issue[:issue_language] %>">
+             <% if @errors %>
+            <span class="tomato"><%= @errors[:issue_language] %></span>
+            <% end %>
+            <br>
+            <br>
+        </li>
+        <li>
+            <label class="label" for="issue_location">Location:</label>
+            <input type="text" name="issue_location" placeholder="Station: DBC17" value="<%= @found_issue[:issue_location] %>">
+             <% if @errors %>
+            <span class="tomato"><%= @errors[:issue_location] %></span>
+            <% end %>
+            <br>
+            <br>
+        </li>
+        <li>
+            <label class="label" for="issue_content">Describe @found_issue:</label>
+            <textarea row="5" type="text" name="issue_content" placeholder="I'VE TRIED EVERYTHING!...(such as)" value="<%= @found_issue[:issue_content] %>"></textarea>
+             <% if @errors %>
+            <span class="tomato"><%= @errors[:issue_content] %></span>
+            <% end %>
+            <br>
+            <br>
+        </li>
+        
+        
+        <li>
+            <label class="label" for="issue_gist">Link to your Gist:</label>
+            <input type="text" name="issue_gist" placeholder="https://gist.github.com/yourGistLink" value="<%= @found_issue[:issue_gist] %>">
+             <% if @errors %>
+            <span class="tomato"><%= @errors[:issue_gist] %></span>
+            <% end %>
+            <br>
+            <label class="label" for="issue_gist">Or create a new Gist:</label>
+            <a href="https://gist.github.com/" class="btn btn-primary" role="button" target="_blank">Create GIST &raquo;</a>
+            <br>
+            <br>
+        </li>
+        <li>
+            <label class="label" for="issue_challenge">Challenge Link:</label>
+            <input type="text" name="issue_challenge" placeholder="https://gist.github.com/DBC-p80" value="<%= @found_issue[:issue_challenge] %>">
+             <% if @errors %>
+            <span class="tomato"><%= @errors[:issue_challenge] %></span>
+            <% end %>
+            <br>
+            <br>
+        </li>
+        <li>
+        <div class ="slider">
+            <label class="label" for="priority">How fucked are you really:</label>
+            <p class="range">Not Really <=> Mega fucked</p><input type="range" name="issue_priority" class="range" min="0" max="10" value="5" step="1" onchange="showValue(this.value)" /> 
+            <p class="range">Current Value: <span id="range">5</span></p>
+            <script type="text/javascript">
+                function showValue(newValue)
+                {
+                document.getElementById("range").innerHTML=newValue;
+                }
+            </script>
+            <br>
+            <br>
+        </div>
+        </li>
+    </ul>
+    <div class="submit"><input type="submit" id="create_button"class="btn-primary" value="Update Issue"></div>
+
+  </form>
+</div>
+

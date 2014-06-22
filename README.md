@@ -1,32 +1,35 @@
-# P10 DevBootTrack 
- 
-##Learning Competencies 
+# P10 Build Something Beautiful
 
+##Learning Competencies
 
-##Summary 
+  * Building a web application from scratch
+  * Managing the development process
+  *
 
-* Implement a strong issues based tracking system for DBC students and teacher.
+##Summary
 
+  You've learned a lot in phase 2: Sinatra, Active Record, Heroku, RSpec, JavaScript, Agile, and much more. Each of these tools is useful in its own right, but together, they give you something much more powerful — the ability to build a web application from nothing.
+
+  For this challenge, your assignment is to build something. It can be as practical or trivial as you would want, as long as its a 100% functional, full-stack web application.
 
 ##Releases
 
-###Release 0 : Build skeleton && create basic routes
 
-1. Import set up workspace for Sinatra, Jasmine, jQuery, AR, Initializer
+###Release 0: Decide on What to Build
 
-### Release 1 : Create ERB's, CSS, Database
+You can build anything you want, provided that it meets the following requirements:
 
+- It has a database
+- It uses an API
+- It is styled
+- It utilizes JavaScript
+- It has meaningful test coverage
+- It is deployed
 
+Once you've come up with an idea, get one of your teachers to approve it.
 
+###Release 1: Build it
 
-### Release 2 : Add API integration
+Once apporoved, start building your project. Be sure to submit a link to where we
+can see your site live.
 
-Integrate DBC, GitHub API's
-
-
-##Resources
-
-
-* [Rendering Partials in Sinatra](http://www.sinatrarb.com/faq.html#partials) 
-
-* [RESTful routes](http://guides.rubyonrails.org/routing.html)

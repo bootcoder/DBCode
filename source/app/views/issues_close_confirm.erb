@@ -1,0 +1,17 @@
+<h1>Confirm Close Issue:</h1>
+<div class="com-post">
+	<% find_issue_by_id(session[:close_sid]) %>
+	<% session[:close_sid] = session[:display_id]%>
+	<% session[:plain] = true %>
+	<%= erb :issues_single_view %>
+	<% session[:plain] = false %>
+	
+	<form action=<%="/issues/close/#{@found_issue.id}"%> method="post">
+	  <input type="hidden" name="_method" value="delete">
+    <button type="submit" class="btn btn-danger">Close Issue</button>
+	</form>
+
+	<form action=<"/issues" method="get">
+    <button type="submit" class="btn btn-default">Cancel</button>
+	</form>
+<div>
