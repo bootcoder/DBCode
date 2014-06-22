@@ -1,0 +1,27 @@
+
+	<% active_issues %>
+	<% @active_issues.each do |issue| %>
+		<div class="container">
+      <div class="row">
+        <div class="col-md-4 pager ">
+          <h3><%= issue.issue_title %></h3>
+          <% if session[:show_id] %>
+          <h4>Issue ID: <%= issue.id %></h4>
+          <% end %>
+          <p>Language: <%= issue.issue_language %></p>
+          <p>Priority Level: <%= issue.issue_priority %></p>
+          <p><a href="<%= "#{issue.issue_gist}" %>" title="Gist">Gist Link</a></p>
+          <% if session[:update_button] %>
+            <p><a class="btn btn-warning" href="/issues/update"
+            <% session[:issue_id] = issue.id %>role="button">Update &raquo;</a></p>
+          <% elsif session[:close_button] %>
+            <p><a class="btn btn-warning" href="/issues/close"
+            <% session[:issue_id] = issue.id %>role="button">Close &raquo;</a></p>
+          <% else %>
+            <p><a class="btn btn-default" href="/issues/display"
+            <% session[:display_id] = issue.id %>role="button">View Issue &raquo;</a></p>
+          <% end %>
+
+        </div>
+	<% end %>
+</div>

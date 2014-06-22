@@ -1,0 +1,266 @@
+.nav {
+	margin-right: 25px;
+}
+.nav li {
+	list-style-type: none;
+	display: inline-block;
+	float: right;
+	
+	padding: 3px;
+}
+
+.bigger {
+	font-size: 2.25em;
+}
+
+.big {
+	font-size: 1.5em;
+}
+
+.stretch {
+	width: 100%;
+}
+
+.down-left {
+	margin-top: 100px;
+	margin-left: 35px;
+}
+
+.down-10 {
+	margin-top: 10px;
+}
+
+.down-30 {
+	margin-top: 30px;
+}
+
+.down-50 {
+	margin-top: 50px;
+}
+
+.down-75 {
+	margin-top: 75px;
+}
+
+.up-10 {
+	margin-bottom: 10px;
+}
+
+.up-30 {
+	margin-bottom: 30px;
+}
+
+.up-50 {
+	margin-bottom: 50px;
+}
+
+
+
+
+
+.pad-down-10 {
+	padding-top: 10px;
+}
+
+.pad-down-30 {
+	padding-top: 30px;
+}
+
+.pad-down-50 {
+	padding-top: 50px;
+}
+
+.pad-up-10 {
+	padding-bottom: 10px;
+}
+
+.pad-up-30 {
+	padding-bottom: 30px;
+}
+
+.pad-up-50 {
+	padding-bottom: 50px;
+}
+
+
+
+
+
+.dark-box {
+	background: lightgray;
+	border-radius: 6px;
+}
+
+.center {
+	margin: 50px auto 50px auto;
+}
+/*header {
+	background-color: black;
+}*/
+
+body {
+	background-color: darkgray;
+}
+
+.com-view {
+	border: 1px solid black;
+	background-color: #CBC5D4;
+	border-radius: 10px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.com-view-inner {
+	padding-left: 15px;
+}
+
+.com-body {
+	padding-left: 20px;
+}
+
+.com-post {
+	border: 1px solid black;
+	background-color: #CBC5D4;
+	border-radius: 10px;
+	padding-left: 40px;
+	padding-bottom: 15px;
+}
+
+.com-post-text {
+	width: 95%;
+}
+
+.gist-view {
+	width: 300%;
+	text-align: left;
+	padding-left: 35px;
+
+}
+
+.nav-ele {
+	padding: 10px;
+	width: 50%;
+	margin: 35px;
+	position: right;
+}
+
+.plain-border {
+	border: 1px solid gray;
+}
+
+.slider {
+	width: 30%;
+}
+
+.nav-ele label {
+	color: black;
+	text-align: left;
+	padding: 5px;
+	font-size: 1em;
+}
+
+.nav-ele .submit {
+	margin: 20px;
+}
+
+.nav-ele label {
+	margin-top: 30px;
+	padding-top: 30px;
+}
+
+.nav-ele p {
+	color: black;
+	font-style: italic;
+	text-align: center;
+
+}
+
+.nav-ele .range {
+	width: 200px;
+	text-align: center;
+}
+
+.editor {
+	height: 300px;
+}
+
+.centered {
+	text-align: center;
+}
+
+.lined {
+	text-align: left;
+	margin-left: 85px;
+	/*display: inline-table;*/
+}
+
+.black-bg {
+	background-color: black;
+}
+
+.align-left {
+	float: left;
+}
+
+.align-right {
+	float: right;
+}
+
+.italics {
+	font-style: italic;
+}
+
+.lightblue {
+	color: lightblue;
+}
+
+.gray {
+	color: gray;
+}
+
+.smaller-10 {
+	font-size: 0.9em;
+}
+
+.smaller-25 {
+	font-size: 0.75em;
+}
+
+.right-30 {
+	margin-left: 30px;
+}
+
+.right-50 {
+	margin-left: 50px;
+}
+
+.right-75 {
+	margin-left: 75px;
+}
+
+.right-100 {
+	margin-left: 100px;
+}
+
+.width_25 {
+	width: 30%;
+}
+
+.radius-15 {
+	border-radius: 15px;
+}
+
+.float-rt {
+	float: right;
+}
+
+.float-lt {
+	float: left;
+}
+
+
+
+
+.fnt-lucida {
+	font-family:"Lucida Console", Monaco, monospace
+}

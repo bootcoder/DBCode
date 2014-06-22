@@ -1,0 +1,84 @@
+
+
+<div class="down_left">
+  <form name="open_issue" class="form-hotizontal nav-ele down-left dark-box" action="/issues/create" method="post">
+    
+    <ul class="input-group list-inline">
+        <h3>Open Issue:</h3>
+        <h4>Create a new coding issue to get some help.</h4>
+        <h4>Please be as desriptive of your problem as possible</h4>
+        <li>
+            <label class="label" for="issue_title">Issue Title:</label>
+            <input type="text" name="issue_title" placeholder="required" value="<%= @params[:issue_title] %>">
+            <% if @errors %>
+            <span class="tomato"><%= @errors[:issue_title] %></span>
+            <% end %>
+            <br>
+            <br>
+        </li>
+
+        <li>
+            <label class="label" for="issue_language">Primary Language:</label>
+            <input type="text" name="issue_language" placeholder="ruby, js, sinatra, ect" value="<%= @params[:issue_language] %>">
+             <% if @errors %>
+            <span class="tomato"><%= @errors[:issue_language] %></span>
+            <% end %>
+            <br>
+            <br>
+        </li>
+        <li>
+            <label class="label" for="issue_location">Location:</label>
+            <input type="text" name="issue_location" placeholder="Station: DBC17" value="<%= @params[:issue_location] %>">
+             <% if @errors %>
+            <span class="tomato"><%= @errors[:issue_location] %></span>
+            <% end %>
+            <br>
+            <br>
+        </li>
+        <li>
+            <label class="label" for="issue_content">Describe Issue:</label>
+            <textarea row="50" class="stretch" type="box" name="issue_content" placeholder="I'VE TRIED EVERYTHING!...(such as)" value="<%= @params[:issue_content] %>"></textarea>
+             <% if @errors %>
+            <span class="tomato"><%= @errors[:issue_content] %></span>
+            <% end %>
+            <br>
+            <br>
+        </li>
+        
+        
+        <li>
+            <label class="label" for="issue_gist">Link to your Gist:</label>
+            <input type="text" name="issue_gist" placeholder="https://gist.github.com/yourGistLink" value="<%= @params[:issue_gist] %>">
+             <% if @errors %>
+            <span class="tomato"><%= @errors[:issue_gist] %></span>
+            <% end %>
+            <br>
+            <label class="label" for="issue_gist">Or create a new Gist:</label>
+            <a href="https://gist.github.com/" class="btn btn-primary" role="button" target="_blank">Create GIST &raquo;</a>
+            <br>
+            <br>
+        </li>
+        <li>
+            <label class="label" for="issue_challenge">Challenge Link:</label>
+            <input type="text" name="issue_challenge" placeholder="https://gist.github.com/DBC-p80" value="<%= @params[:issue_challenge] %>">
+             <% if @errors %>
+            <span class="tomato"><%= @errors[:issue_challenge] %></span>
+            <% end %>
+            <br>
+            <br>
+        </li>
+        <li>
+        <div class ="slider down-30">
+            <label class="label" for="priority">How fucked are you really:</label>
+            <p class="range">Not Really <=> Mega fucked</p><input type="range" name="issue_priority" class="range" min="0" max="10" value="5" step="1" onchange="showValue(this.value)" /> 
+            <p class="range">Current Value: <span id="range">5</span></p>
+           
+            <br>
+            <br>
+        </div>
+        </li>
+    </ul>
+    <div class="submit"><input type="submit" id="create_button"class="btn-primary" value="Create Issue"></div>
+
+  </form>
+</div>

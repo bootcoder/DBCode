@@ -1,0 +1,10 @@
+<% if current_user %>
+<div class="container">
+    <section class="com-post">
+      <form action="/comments/create" method="post" name="com-create">
+      	<textarea class="com-post-text" rows ="8" type"text" name="com_content" placeholder="Your insight greatly appreciated..."></textarea>
+      	<div class="submit"><input type="submit" id="com_submit"class="btn-primary" value="Post Comment"></div>
+      </form>
+    </section>
+  </div>
+ <% end %>

@@ -1,0 +1,36 @@
+
+      <div class="container">
+        <% find_issue_by_id(session[:display_id]) %>
+        <% find_user_by_id(@found_issue.issue_belongs_to) %>
+        <div class="col-md-4 pager">
+        
+          <ul class="input-group list-inline lined">
+            <h3><%= @found_issue.issue_title %></h3>
+
+            <li><p>Created by: <%= @found_user.username %></p></li>
+            <li><p>Priority: <%= @found_issue.issue_priority %></p></li>
+            <% if @found_issue.issue_active %>
+            <li><p>Status: Open</p></li>
+            <% else %>
+            <li><p>Status: Closed</p></li>
+            <% end %>
+            <li><p>Location: <%= @found_issue.issue_location %></p></li>
+            <li><p>Language: <%= @found_issue.issue_language %></p></li>
+            <li><p>Issue ID: <%= @found_issue.id %></p></li>
+            <li><p>Description: <%= @found_issue.issue_content %></p></li>
+            
+            <li><p><a href="<%= "#{@found_issue.issue_challenge}" %>"title="challenge" target="_blank">Challenge Link</a></p></li>
+            
+
+            <li><p><a href="<%= "#{@found_issue.issue_gist}" %>" target="_blank" title="Gist">Gist Link</a></p></li>
+          </ul>
+          <section class="gist-view"
+            <p><script src="<%= @found_issue.issue_gist %>.js"></script></p>
+          </section>
+
+  </div>
+
+  <%= erb :com_post %>
+  <%= erb :com_view %>
+</div>
+

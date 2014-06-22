@@ -1,0 +1,16 @@
+<div class="container">
+    <% find_comments_by_issue_id(session[:display_id]) %>
+    <% @found_comments.each do |com| %>
+    	<section class="com-view">
+    		<section class="com-view-inner">
+	      	<% find_user_by_id(com.com_belongs_to_user) %>
+	      	<h4>User: <%= @found_user.username %></h4>
+	      	<h4>Posted: <%= com.created_at %></h4>
+	      	<section class="com_body">
+	      		<p><%= com.com_content %></p>
+	      		<p>Stub for votes<%= com.com_vote %></p>
+      	</section>
+      	</section>
+    	</section>
+		<% end %>
+  </div>

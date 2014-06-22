@@ -1,0 +1,9 @@
+<% session[:show_id] = true %>
+<div class="container move_down com-post">
+<h1>Close Issue:</h1>	
+	
+				<% session[:close_button] = true %>
+				<%= erb :_list_all_issues %>
+				<% session[:close_button] = false %>
+
+</div>

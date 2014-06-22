@@ -1,0 +1,40 @@
+httparty notes
+
+
+
+query_params_example = {
+	"description": "the description",
+	"public": true,
+	"files": {
+		"file1.txt": {
+			"content": "String file contents"
+		}
+	}
+}
+
+
+HTTParty.post(address,
+	query: query_params_example,
+	headers: { "User-Agent" => "Awesome-Octocat-app",
+	"Authorization" => "token 4702347094-09e7rw-09q7wer-097032947-0"
+	}
+)
+
+
+
+
+
+
+
+
+
+module hackernews notes
+
+defines a way to do a get request against an endpoint
+
+class of Client 
+you can have models that dont interact with a db
+maybe they only interact with an API
+maybe they only interact with other models.....
+
+base_uri --> built in method for httparty
